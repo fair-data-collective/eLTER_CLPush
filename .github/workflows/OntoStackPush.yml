@@ -50,3 +50,9 @@ jobs:
         run: |
           python ./src/cfg.py        
           ./src/deploy2db.sh
+          
+      - name: test storing artifacts
+        uses: actions/upload-artifact@v2
+        with: 
+          name: assets-for-download
+          path: ./
